@@ -1,0 +1,28 @@
+_prefs: 
+  baselayer: ''
+  mapid: jauntful.0fdfd39f
+  saveCenter: true
+_properties: {}
+attribution: Map data © OpenStreetMap contributors
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - 4.6524
+  - 46.8182
+  - 11
+description: Jauntful Map by Jauntful LLC is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+format: "png8:m=h"
+interactivity_layer: waterway
+layers: null
+maxzoom: 22
+minzoom: 0
+name: Jauntful Map
+source: "mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5"
+styles: 
+  - style.mss
+  - labels.mss
+  - roads.mss
+template: ''
