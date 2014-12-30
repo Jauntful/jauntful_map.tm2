@@ -16,6 +16,7 @@
 @motorway:@jtl_gray_light;
 @main: @jtl_gray_light;
 @street: @jtl_gray_light;
+@buildings: #DFE2DA;
 
 @land: #F2F2EA;
 @water: #91bfce;
@@ -106,10 +107,18 @@ Map {
 }
 
 // Buildings //
+
 #building {
+  ::shadow[zoom>=17] {
+    polygon-clip: false;
+    polygon-fill: @buildings * 0.88;
+  }
+  polygon-clip: false;
+  polygon-fill: mix(@land,@buildings,52);
+  line-color: @buildings;
+  line-width: 0.5;
   [zoom>=17] {
-    line-width: 0.8;
-    line-color: darken(@land,10%);
-    line-opacity: 0.8;
+    polygon-geometry-transform: translate(-0.5,-1.2);
+    line-width: 1;
   }
 }

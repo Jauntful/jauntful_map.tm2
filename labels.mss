@@ -111,7 +111,7 @@
   [class='service'],
   [class='driveway'],
   [class='path'] {
-    [zoom>=15] {
+    [zoom>=14] {
     text-name: @name;
     text-face-name:'Roboto Light';
     text-fill:@jtl_gray_dark;
