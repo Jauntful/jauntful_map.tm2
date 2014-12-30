@@ -106,7 +106,11 @@
     [zoom>=17] { text-size:15; }
     [zoom>=18] { text-size:16; }
   }
-  [class='street'],[class='street'] {
+  [class='street'],
+  [class='street_limited'],
+  [class='service'],
+  [class='driveway'],
+  [class='path'] {
     [zoom>=15] {
     text-name: @name;
     text-face-name:'Roboto Light';
@@ -125,6 +129,8 @@
     [zoom>=18] { text-size:14; }
   }
 }
+
+
 
 
 // Water Features //

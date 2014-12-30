@@ -10,9 +10,9 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 4.6524
-  - 46.8182
-  - 11
+  - 11.2556
+  - 43.7708
+  - 16
 description: Jauntful Map by Jauntful LLC is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 format: "png8:m=h"
 interactivity_layer: waterway

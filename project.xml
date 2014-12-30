@@ -5,7 +5,7 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[Map data © OpenStreetMap contributors]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">4.6524,46.8182,11</Parameter>
+  <Parameter name="center">11.2556,43.7708,16</Parameter>
   <Parameter name="description"><![CDATA[Jauntful Map by Jauntful LLC is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.]]></Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">22</Parameter>
@@ -1958,29 +1958,6 @@
 <Style name="place_label" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
-    <TextSymbolizer size="24" halo-radius="4" face-name="Roboto Condensed" text-transform="uppercase" fill="#9b9c99" placement="point" halo-fill="#f2f2ea" wrap-width="40" wrap-before="true" character-spacing="2" line-spacing="0" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>50000</MaxScaleDenominator>
-    <MinScaleDenominator>25000</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
-    <TextSymbolizer size="16" halo-radius="3" face-name="Roboto Condensed" text-transform="uppercase" fill="#9b9c99" placement="point" halo-fill="#f2f2ea" wrap-width="40" wrap-before="true" character-spacing="2" line-spacing="0" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>100000</MaxScaleDenominator>
-    <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
-    <TextSymbolizer size="13" halo-radius="2" face-name="Roboto Condensed" text-transform="uppercase" fill="#9b9c99" placement="point" halo-fill="#f2f2ea" wrap-width="40" wrap-before="true" character-spacing="2" line-spacing="0" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <MinScaleDenominator>100000</MinScaleDenominator>
-    <Filter>([type] = 'neighbourhood')</Filter>
-    <TextSymbolizer face-name="Roboto Condensed" text-transform="uppercase" fill="#9b9c99" placement="point" halo-radius="2" halo-fill="#f2f2ea" size="10" wrap-width="40" wrap-before="true" character-spacing="2" line-spacing="0" ><![CDATA[[name_en]]]></TextSymbolizer>
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>25000</MaxScaleDenominator>
     <Filter>([type] = 'suburb')</Filter>
     <TextSymbolizer size="24" halo-radius="4" face-name="Roboto Condensed" text-transform="uppercase" fill="#9b9c99" placement="point" halo-fill="#f2f2ea" wrap-width="40" wrap-before="true" character-spacing="2" line-spacing="0" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
@@ -2023,6 +2000,29 @@
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>100000</MinScaleDenominator>
     <Filter>([type] = 'hamlet')</Filter>
+    <TextSymbolizer face-name="Roboto Condensed" text-transform="uppercase" fill="#9b9c99" placement="point" halo-radius="2" halo-fill="#f2f2ea" size="10" wrap-width="40" wrap-before="true" character-spacing="2" line-spacing="0" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([type] = 'neighbourhood')</Filter>
+    <TextSymbolizer size="24" halo-radius="4" face-name="Roboto Condensed" text-transform="uppercase" fill="#9b9c99" placement="point" halo-fill="#f2f2ea" wrap-width="40" wrap-before="true" character-spacing="2" line-spacing="0" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood')</Filter>
+    <TextSymbolizer size="16" halo-radius="3" face-name="Roboto Condensed" text-transform="uppercase" fill="#9b9c99" placement="point" halo-fill="#f2f2ea" wrap-width="40" wrap-before="true" character-spacing="2" line-spacing="0" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood')</Filter>
+    <TextSymbolizer size="13" halo-radius="2" face-name="Roboto Condensed" text-transform="uppercase" fill="#9b9c99" placement="point" halo-fill="#f2f2ea" wrap-width="40" wrap-before="true" character-spacing="2" line-spacing="0" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([type] = 'neighbourhood')</Filter>
     <TextSymbolizer face-name="Roboto Condensed" text-transform="uppercase" fill="#9b9c99" placement="point" halo-radius="2" halo-fill="#f2f2ea" size="10" wrap-width="40" wrap-before="true" character-spacing="2" line-spacing="0" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
@@ -2166,6 +2166,75 @@
 <Style name="road_label" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([class] = 'driveway')</Filter>
+    <TextSymbolizer size="14" face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([class] = 'driveway')</Filter>
+    <TextSymbolizer size="13" face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([class] = 'driveway')</Filter>
+    <TextSymbolizer size="12" face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'driveway')</Filter>
+    <TextSymbolizer face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" size="9" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([class] = 'service')</Filter>
+    <TextSymbolizer size="14" face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([class] = 'service')</Filter>
+    <TextSymbolizer size="13" face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([class] = 'service')</Filter>
+    <TextSymbolizer size="12" face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'service')</Filter>
+    <TextSymbolizer face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" size="9" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([class] = 'street_limited')</Filter>
+    <TextSymbolizer size="14" face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([class] = 'street_limited')</Filter>
+    <TextSymbolizer size="13" face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([class] = 'street_limited')</Filter>
+    <TextSymbolizer size="12" face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'street_limited')</Filter>
+    <TextSymbolizer face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" size="9" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
     <Filter>([class] = 'street')</Filter>
     <TextSymbolizer size="14" face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
@@ -2185,6 +2254,29 @@
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([class] = 'street')</Filter>
+    <TextSymbolizer face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" size="9" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <Filter>([class] = 'path')</Filter>
+    <TextSymbolizer size="14" face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <Filter>([class] = 'path')</Filter>
+    <TextSymbolizer size="13" face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([class] = 'path')</Filter>
+    <TextSymbolizer size="12" face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([class] = 'path')</Filter>
     <TextSymbolizer face-name="Roboto Light" fill="#535355" placement="line" vertical-alignment="top" placement-type="simple" halo-radius="1.5" halo-fill="#f2f2ea" minimum-distance="200" size="9" character-spacing="1.75" ><![CDATA[[name_en]]]></TextSymbolizer>
   </Rule>
   <Rule>
