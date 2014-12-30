@@ -107,7 +107,6 @@ Map {
 }
 
 // Buildings //
-
 #building {
   ::shadow[zoom>=17] {
     polygon-clip: false;
