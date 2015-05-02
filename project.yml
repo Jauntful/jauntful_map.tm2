@@ -10,8 +10,8 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 11.2667
-  - 43.7728
+  - -122.3979
+  - 37.7439
   - 14
 description: Jauntful Map by Jauntful LLC is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
 format: "png8:m=h"

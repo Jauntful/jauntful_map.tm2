@@ -89,7 +89,7 @@
 
 #road_label {
 [class='main'] {
-    [zoom>=14] {
+    [zoom>=13] {
     text-name: @name;
     text-face-name:'Roboto Regular';
     text-fill:@jtl_gray_dark;
@@ -111,7 +111,7 @@
   [class='service'],
   [class='driveway'],
   [class='path'] {
-    [zoom>=14] {
+    [zoom>=13] {
     text-name: @name;
     text-face-name:'Roboto Light';
     text-fill:@jtl_gray_dark;

@@ -6,24 +6,47 @@
 @name: '[name_en]';
 
 // Common Colors //
-@jtl_brown:#353631;
-@jtl_gray_dark:#535355;
-@jtl_gray: #70716c;
-@jtl_gray_light:#9b9c99;
+@jtl_brown:rgb(47, 48, 43);
+@jtl_gray_dark:rgb(47, 48, 43);
+@jtl_gray: rgb(112, 113, 108);
+@jtl_gray_light:rgb(141, 142, 136);
 @jtl_gray_lighter:#d7d7d6;
 @white: #fff;
 
 @motorway:@jtl_gray_light;
 @main: @jtl_gray_light;
 @street: @jtl_gray_light;
-@buildings: #DFE2DA;
+@buildings: darken(@land,3%);
 
-@land: #F2F2EA;
+@land: #f4f5f5; //#F2F2EA;
 @water: #91bfce;
 @park: #769f4c;
 
 Map {
   background-color:@land;
+}
+
+#landuse {
+  [class='pitch'][zoom>=18] {
+    ::wall {
+    line-color: lighten(@park, 10);
+    line-width: 3;
+    line-join: round;
+    line-cap: round;
+    polygon-fill: lighten(@park, 10);
+  }    
+    ::roof {
+      polygon-fill: @park;
+      polygon-geometry-transform: translate(-2,-2);
+      polygon-clip: false;
+      [zoom>=15] {  
+      line-width: 1;
+      line-color: lighten(@park, 10);
+      line-geometry-transform:translate(-2,-2);
+      line-clip:false;
+      }
+    }   
+  }
 }
 
 // Political boundaries //
@@ -95,8 +118,24 @@ Map {
 }
 
 // Landuse areas //
+// Landcover
+
+//@land: #f8f4f0;
+//@water: #a0c8f0;
+//@water_dark: #185869;  // for the inline/shadow
+@crop: #eeeed4;
+@grass: @park;//#e7ebd1;
+@scrub: @park;//#e0e8cd;
+@wood: #d4e2c6;
+@snow: #f4f8ff;
+@rock: #ddd;
+@sand: mix(#ffd,@land,33%);
+
+
+
+
 #landuse {
-  [class='park'] { 
+  [class='park'],[class="pitch"] { 
     polygon-fill: @park; 
     [zoom<=9] {polygon-opacity: 0.2;}
     [zoom>=10] {polygon-opacity: 0.4;}
@@ -113,7 +152,7 @@ Map {
     polygon-fill: @buildings * 0.88;
   }
   polygon-clip: false;
-  polygon-fill: mix(@land,@buildings,52);
+  polygon-fill: @buildings;
   line-color: @buildings;
   line-width: 0.5;
   [zoom>=17] {
